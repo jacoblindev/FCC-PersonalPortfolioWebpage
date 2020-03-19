@@ -84,9 +84,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     height: 100vh;
-    text-align: right;
+    text-align: left;
 }
 
 #welcome-section h1 {
@@ -101,7 +101,6 @@ a {
 }
 
 #welcome-section p {
-    width: 80%;
     font-size: 1.3em;
     color: #888;
 }
@@ -114,7 +113,7 @@ a {
 
 #welcome-section ul li a {
     font-size: 3em;
-    padding-left: 1em;
+    padding-right: 1em;
     color: #888;
 }
 
@@ -126,8 +125,8 @@ a {
     font-size: 2em;
     color: #333;
     position: absolute;
-    left: calc(20% / 2);
-    bottom: 15px;
+    right: calc(20% / 2);
+    bottom: 5px;
 }
 
 /* Footer Section */
@@ -136,4 +135,47 @@ footer {
     padding: 1.2em 0;
     background-color: #000;
     color: #888;
+}
+
+@media screen and (max-width: 420px) {
+
+    .container {
+        width: 90%;
+    }
+
+    /* Navbar Section */
+    #navbar div {
+        justify-content: space-around;
+    }
+
+    #navbar header {
+        font-size: 2em;
+    }
+
+    #navbar ul li {
+        margin-left: 1.8em;
+    }
+
+    /* Welcome Section */
+    #welcome-section h1 {
+        font-size: 2.4em;
+    }
+
+    #welcome-section h2 {
+        font-size: 1.6em;
+    }
+
+    #welcome-section p {
+        font-size: 1.2em;
+    }
+
+    #welcome-section ul li a {
+        font-size: 2em;
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 1em 0;
+        font-size: .8em;
+    }
 }
