@@ -3,6 +3,7 @@ font-family: 'Major Mono Display', monospace;
 font-family: 'Montserrat', sans-serif;
 */
 
+/* DESKTOP VERSION */
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -46,6 +47,7 @@ a {
     background-color: #000;
     position: fixed;
     width: 100%;
+    z-index: 99;
 }
 
 #navbar div {
@@ -129,12 +131,59 @@ a {
     bottom: 5px;
 }
 
+/* Projects Section */
+#projects {
+    /* height: 70vh; */
+    margin: 1.5em 0;
+    border-top: 2px solid #333;
+    /* border-bottom: 2px solid #333; */
+}
+
+#projects h2 {
+    margin-top: 1.2em;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2em;
+}
+
+#projects .cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.4em 0;
+    justify-content: space-between;
+}
+
+#projects .card {
+    width: 24%;
+    background-color: #000;
+    padding: .8em;
+}
+
+#projects img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+#projects h3 {
+    font-size: 1em;
+    text-align: center;
+    padding-top: .8em;
+}
+
 /* Footer Section */
 footer {
     text-align: center;
     padding: 1.2em 0;
     background-color: #000;
     color: #888;
+}
+
+/* MOBILE VERSION */
+@media screen and (max-width: 1024px) {
+    /* Projects Section */
+    #projects .card {
+        width: 49%;
+        margin-bottom: 1.2em;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -171,6 +220,25 @@ footer {
 
     #welcome-section ul li a {
         font-size: 2em;
+    }
+
+    /* Projects Section */
+    #projects {
+        padding-top: 3em;
+    }
+
+    #projects h2 {
+        margin-top: 1.5em;
+        font-size: 1.5em;
+    }
+
+    #projects .card {
+        width: 100%;
+        margin-bottom: 1.2em;
+    }
+
+    #projects .card:last-child {
+        margin-bottom: 0;
     }
 
     /* Footer Section */
